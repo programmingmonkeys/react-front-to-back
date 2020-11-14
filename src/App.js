@@ -3,11 +3,11 @@ import './App.css'
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <h1>foo</h1>
-      </div>
-    )
+    const name = 'Foo bar'
+    const loading = false
+    const showName = false
+
+    return <div className="App">{loading ? <h4>Loading...</h4> : <h1>Hello {showName && name}</h1>}</div>
   }
 }
 
