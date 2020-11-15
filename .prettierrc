@@ -1,18 +1,11 @@
 {
   "singleQuote": true,
+  "jsx-quotes": [2, "prefer-single"],
   "semi": false,
   "bracketSpacing": true,
   "arrowParens": "always",
   "trailingComma": "all",
   "printWidth": 140,
-  "quotes": [
-    2,
-    "single",
-    {
-      "avoidEscape": true
-    }
-  ],
-  "jsx-quotes": [2, "prefer-single"],
   "object-curly-spacing": [2, "always"],
   "spaced-comment": "off",
   "no-console": "warn",
