@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import './App.css'
+import Navbar from './components/layout/Navbar'
 
 class App extends Component {
   render() {
-    const name = 'Foo bar'
-    const loading = false
-    const showName = false
-
-    return <div className="App">{loading ? <h4>Loading...</h4> : <h1>Hello {showName && name}</h1>}</div>
+    return (
+      <div className="App">
+        <Navbar />
+      </div>
+    )
   }
 }
 
