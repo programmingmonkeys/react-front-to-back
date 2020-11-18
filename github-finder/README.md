@@ -1,3 +1,9 @@
+The final code for this project can be found in this Github repo: https://github.com/bradtraversy/github-finder
+
+Docs for the Github API: https://developer.github.com/v3/
+
+To Register Your Github App & Get Keys: https://github.com/settings/applications/new
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
