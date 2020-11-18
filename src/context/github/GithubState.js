@@ -4,6 +4,9 @@ import GithubContext from './githubContext'
 import GithubReducer from './githubReducer'
 import { SEARCH_USERS, SET_LOADING, CLEAR_USERS, GET_USER, GET_REPOS } from '../types'
 
+let githubClientId
+let githubClientSecret
+
 if (process.env.NODE_ENV !== 'production') {
   githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID
   githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET
