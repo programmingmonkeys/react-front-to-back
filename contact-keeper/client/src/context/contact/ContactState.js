@@ -15,7 +15,7 @@ import {
   CONTACT_ERROR,
 } from '../types'
 
-import contactContext from './contactContext'
+// import contactContext from './contactContext'
 
 const ContactState = (props) => {
   const initialState = {
@@ -57,6 +57,12 @@ const ContactState = (props) => {
   }
 
   // Delete Contact
+  const deleteContact = (id) => {
+    dispatch({
+      type: DELETE_CONTACT,
+      payload: id,
+    })
+  }
 
   // Set Current Contact
 
@@ -73,6 +79,7 @@ const ContactState = (props) => {
       value={{
         contacts: state.contacts,
         addContact,
+        deleteContact,
       }}
     >
       {props.children}
