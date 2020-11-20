@@ -25,6 +25,20 @@ const ContactState = (props) => {
         phone: '111-111-1111',
         type: 'personal',
       },
+      {
+        id: 2,
+        name: 'bar',
+        email: 'bar@foobar.com',
+        phone: '222-222-2222',
+        type: 'personal',
+      },
+      {
+        id: 3,
+        name: 'friday',
+        email: 'friday@foobar.com',
+        phone: '333-333-3333',
+        type: 'professional',
+      },
     ],
   }
 
