@@ -18,7 +18,7 @@ const AuthState = (props) => {
 
   // Load User Action
   const loadUser = async () => {
-    if (localStorage.token) setAuthToken(localStorage.token)
+    setAuthToken(localStorage.token)
 
     try {
       const res = await axios.get('/api/auth')
@@ -82,10 +82,10 @@ const AuthState = (props) => {
     }
   }
 
-  // Logout Action
+  // Logout
   const logout = () => dispatch({ type: LOGOUT })
 
-  // Clear Errors Action
+  // Clear Errors
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS })
 
   return (
