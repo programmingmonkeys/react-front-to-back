@@ -16,12 +16,12 @@ const AuthState = (props) => {
 
   const [state, dispatch] = useReducer(authReducer, initialState)
 
-  // Load User Action
+  // Load User
   const loadUser = async () => {
     setAuthToken(localStorage.token)
 
     try {
-      const res = await axios.get('/api/auth')
+      const res = await axios.get('/api/v1/auth')
 
       dispatch({
         type: USER_LOADED,
@@ -32,7 +32,7 @@ const AuthState = (props) => {
     }
   }
 
-  // Register User Action
+  // Register User
   const register = async (formData) => {
     const config = {
       headers: {
@@ -41,7 +41,7 @@ const AuthState = (props) => {
     }
 
     try {
-      const res = await axios.post('/api/users', formData, config)
+      const res = await axios.post('/api/v1/users', formData, config)
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -57,7 +57,7 @@ const AuthState = (props) => {
     }
   }
 
-  // Login User Action
+  // Login User
   const login = async (formData) => {
     const config = {
       headers: {
@@ -66,7 +66,7 @@ const AuthState = (props) => {
     }
 
     try {
-      const res = await axios.post('/api/auth', formData, config)
+      const res = await axios.post('/api/v1/auth', formData, config)
 
       dispatch({
         type: LOGIN_SUCCESS,
@@ -82,10 +82,10 @@ const AuthState = (props) => {
     }
   }
 
-  // Logout Action
+  // Logout
   const logout = () => dispatch({ type: LOGOUT })
 
-  // Clear Errors Action
+  // Clear Errors
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS })
 
   return (
