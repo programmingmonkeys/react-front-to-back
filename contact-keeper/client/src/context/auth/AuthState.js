@@ -82,10 +82,10 @@ const AuthState = (props) => {
     }
   }
 
-  // Logout
+  // Logout Action
   const logout = () => dispatch({ type: LOGOUT })
 
-  // Clear Errors
+  // Clear Errors Action
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS })
 
   return (
