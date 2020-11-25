@@ -23,5 +23,9 @@ app.use(`/api/${apiVersion}/auth`, require('./routes/auth'))
 app.use(`/api/${apiVersion}/contacts`, require('./routes/contacts'))
 
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`)
+  try {
+    console.log(`Server started on port ${PORT}`)
+  } catch (err) {
+    console.log('Server error', err)
+  }
 })

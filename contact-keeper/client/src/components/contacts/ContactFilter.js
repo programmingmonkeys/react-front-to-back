@@ -8,9 +8,7 @@ const ContactFilter = () => {
   const { filterContacts, clearFilter, filtered } = contactContext
 
   useEffect(() => {
-    if (filtered === null) {
-      text.current.value = ''
-    }
+    if (filtered === null) text.current.value = ''
   })
 
   const onChange = (e) => {
