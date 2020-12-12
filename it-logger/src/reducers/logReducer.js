@@ -16,7 +16,7 @@ const initialState = {
   loading: false,
   error: null,
 }
-
+// eslint-disable-next-line
 export default (state = initialState, action) => {
   switch (action.type) {
     case GET_LOGS:
